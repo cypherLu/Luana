@@ -1,0 +1,669 @@
+/*butterfly*/
+@keyframes rotating {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 0, 0deg);
+      -moz-transform: rotate3d(0, 0, 0, 0deg);
+      -ms-transform: rotate3d(0, 0, 0, 0deg);
+      -o-transform: rotate3d(0, 0, 0, 0deg);
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 1, 0, 720deg);
+      -moz-transform: rotate3d(0, 1, 0, 720deg);
+      -ms-transform: rotate3d(0, 1, 0, 720deg);
+      -o-transform: rotate3d(0, 1, 0, 720deg);
+      transform: rotate3d(0, 1, 0, 720deg);
+    }
+  }
+  @keyframes rotatingY {
+    100% {
+      -webkit-transform: rotateY(-360deg);
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      -o-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+  @keyframes fluttering {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    10%,
+    60% {
+      -webkit-transform: translate3d(0, 150px, 0);
+      -moz-transform: translate3d(0, 150px, 0);
+      -ms-transform: translate3d(0, 150px, 0);
+      -o-transform: translate3d(0, 150px, 0);
+      transform: translate3d(0, 150px, 0);
+    }
+    30%,
+    80% {
+      -webkit-transform: translate3d(0, 50px, 0);
+      -moz-transform: translate3d(0, 50px, 0);
+      -ms-transform: translate3d(0, 50px, 0);
+      -o-transform: translate3d(0, 50px, 0);
+      transform: translate3d(0, 50px, 0);
+    }
+  }
+  @keyframes left-wing-flap {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    }
+    50% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+      transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -70deg);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+      transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 60deg);
+    }
+  }
+  @keyframes right-wing-flap {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    }
+    50% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+      transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -70deg);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      -o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+      transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 60deg);
+    }
+  }
+  
+  .butterfly_container {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: translate(50px,0px);
+  }
+  .butterfly_container var {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .butterfly_container var.rotate3d {
+    -webkit-transform: rotate3d(1, 0.5, 0, 50deg);
+    -moz-transform: rotate3d(1, 0.5, 0, 50deg);
+    -ms-transform: rotate3d(1, 0.5, 0, 50deg);
+    -o-transform: rotate3d(1, 0.5, 0, 50deg);
+    transform: rotate3d(1, 0.5, 0, 50deg);
+  }
+  .butterfly_container var.translate3d {
+    -webkit-animation: fluttering 10s ease-in-out infinite;
+    -moz-animation: fluttering 10s ease-in-out infinite;
+    -ms-animation: fluttering 10s ease-in-out infinite;
+    -o-animation: fluttering 10s ease-in-out infinite;
+    animation: fluttering 10s ease-in-out infinite;
+  }
+  .butterfly_container figure.butterfly {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  .butterfly_container figure.butterfly .wing {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -moz-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -ms-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -o-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+  }
+  .butterfly_container figure.butterfly .wing.right {
+    -webkit-transform-origin: 50px 50px;
+    -moz-transform-origin: 50px 50px;
+    -ms-transform-origin: 50px 50px;
+    -o-transform-origin: 50px 50px;
+    transform-origin: 50px 50px;
+    -webkit-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -moz-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -ms-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -o-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -webkit-animation: right-wing-flap 1s ease-in-out infinite;
+    -moz-animation: right-wing-flap 1s ease-in-out infinite;
+    -ms-animation: right-wing-flap 1s ease-in-out infinite;
+    -o-animation: right-wing-flap 1s ease-in-out infinite;
+    animation: right-wing-flap 1s ease-in-out infinite;
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+  .butterfly_container figure.butterfly .wing.left {
+    -webkit-transform-origin: 50px 50px;
+    -moz-transform-origin: 50px 50px;
+    -ms-transform-origin: 50px 50px;
+    -o-transform-origin: 50px 50px;
+    transform-origin: 50px 50px;
+    -webkit-animation: left-wing-flap 1s ease-in-out infinite;
+    -moz-animation: left-wing-flap 1s ease-in-out infinite;
+    -ms-animation: left-wing-flap 1s ease-in-out infinite;
+    -o-animation: left-wing-flap 1s ease-in-out infinite;
+    animation: left-wing-flap 1s ease-in-out infinite;
+  }
+  .butterfly_container figure.butterfly .wing use {
+    display: block;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    fill: url(#image);
+  }
+  
+  .svg-defs {
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+/*end butterfly*/
+.header{
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transform: translate(70px,-10px);
+    margin-bottom: 8px;
+}
+
+#header{
+    margin-bottom: 0px;
+    color: purple;
+    font-family:cursive;
+}
+
+.HomePagebtn{
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    border: none;
+    position: sticky;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+/*Explore button*/
+.dropbtn{
+    background-color:purple;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    position: sticky;
+    cursor: pointer;
+    display: flex;
+}
+.caret{
+    width: 10px;
+    transform: translate(193px, 0px);
+}
+/*position dropdown content*/
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:purple;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+    left: 0;
+}
+/*links inside the dropdown*/
+.dropdown-content a{
+    color:white;
+    padding:12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*change color of dropdown links in hover*/
+.dropdown-content a:hover 
+{background-color: palevioletred;}
+/*show the dropdown menu on hover*/
+.dropdown:hover .dropdown-content
+{display: block;}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background-color: purple;
+    }
+    .column a {
+    background-color: purple;
+    float: none;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    #drop{
+    color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .row{
+    display: flex;
+    justify-content: space-between;
+    }
+.show{display: block;}
+/*dropdown's end*/
+.navbar{
+    display:flex;
+    position:sticky;
+    align-items:center;
+    justify-content:center;
+    top: 0px;
+}
+/*search bar*/
+.rightnav{
+    position: absolute;
+    top: 50%;
+    left: 99.8%;
+    transform: translate(-100%, -50%);
+    background-color: purple;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    transition: 0.4s;
+
+}
+.rightnav:hover{
+    background-color: pink;
+}
+.rightnav:hover #search{
+    width: 240px;
+    padding: 0;
+    background-color: pink;
+}
+.rightnav:hover .btnbtn-sm{
+    background-color: #fff;
+}
+.rightnav:hover .glass{
+    fill: black;
+}
+#search{
+    border: none;
+    background-color: purple;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    outline: 0;
+}
+.btnbtn-sm{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: purple;
+    text-decoration: none;
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+    transform: translate(0px,-40px);
+}
+/*icon glass(btnbtn-sm)*/
+.glass{
+    fill: white;
+}
+/*search script, open function*/
+.open #search{
+    width: 240px;
+    padding: 0;
+    background-color: pink;
+}
+.open .btnbtn-sm{
+    background-color: #fff;
+}
+.open .glass{
+    fill: black;
+}
+.open{
+    background-color: pink;
+}
+/*search bar's end*/
+
+/*navbar background*/
+.background{
+    background: rgba(128,0,128);
+    background-blend-mode:darken;
+    background-size:auto;
+}
+.nav-list{
+    width: 99%;
+    margin: 10px;
+    display: flex;
+    padding: 0;
+}
+/*login button and login form*/
+#modal_trigger{
+    color: purple;
+    background-color: white;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    margin-top: 16px;
+    margin-left: auto;
+}
+
+#lean_overlay {
+position: fixed;
+z-index: 100;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+background: #000;
+display: none;
+}
+
+.popupContainer {
+position: absolute;
+width: 330px;
+height: auto;
+left: 45%;
+top: 60px;
+background: pink;
+}
+
+.header_title{
+color: white;
+}
+
+
+.btn {
+padding: 10px 20px;
+background: purple;
+cursor: pointer;
+}
+
+.btn_red {
+background: purple;
+color: #FFF;
+}
+
+.btn:hover {
+background: palevioletred;
+}
+
+.btn_red:hover {
+background: palevioletred;
+}
+
+a.btn {
+color: white;
+text-align: center;
+text-decoration: none;
+}
+
+a.btn_red {
+color: #FFF;
+}
+
+.one_half {
+width: 50%;
+display: block;
+float: left;
+}
+
+.one_half.last {
+width: 45%;
+margin-left: 5%;
+}
+/* Popup Styles*/
+
+.popupHeader {
+font-size: 16px;
+text-transform: uppercase;
+}
+
+.popupHeader {
+background: purple;
+position: relative;
+padding: 10px 20px;
+border-bottom: 1px solid #DDD;
+font-weight: bold;
+}
+
+.popupHeader .modal_close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 10px 15px;
+background: purple;
+cursor: pointer;
+color: pink;
+font-size: 16px;
+}
+
+.popupBody {
+padding: 20px;
+}
+/* Social Login Form */
+
+
+.social_login .social_box {
+display: block;
+clear: both;
+padding: 10px;
+margin-bottom: 10px;
+background: #F4F4F2;
+overflow: hidden;
+}
+
+.social_login .icon {
+display: block;
+width: 10px;
+padding: 5px 10px;
+margin-right: 10px;
+float: left;
+color: #FFF;
+font-size: 16px;
+text-align: center;
+}
+
+.social_login .fb .icon {
+width: 25px;
+}
+
+.social_login .google .icon {
+width: 25px;
+}
+
+.social_login .icon_title {
+display: block;
+padding: 9px 0;
+float: left;
+font-weight: bold;
+font-size: 16px;
+color: #777;
+
+}
+
+.social_login .social_box:hover { 
+background: palevioletred;
+}
+
+.social_login .social_box:hover .icon_title{
+color: white;
+}
+
+
+.centeredText {
+text-align: center;
+margin: 20px 0;
+clear: both;
+overflow: hidden;
+text-transform: uppercase;
+}
+
+.action_btns {
+clear: both;
+overflow: hidden;
+}
+
+.action_btns a {
+display: block;
+}
+/* User Login Form */
+
+.user_login {
+display: none;
+}
+
+.user_login label {
+display: block;
+margin-bottom: 5px;
+}
+
+.user_login input[type="text"],
+.user_login input[type="email"],
+.user_login input[type="password"] {
+display: block;
+width: 90%;
+padding: 10px;
+border: 1px solid #DDD;
+color: black;
+}
+
+.user_login input[type="checkbox"] {
+float: left;
+margin-right: 5px;
+}
+
+.user_login input[type="checkbox"]+label {
+float: left;
+}
+
+.user_login .checkbox {
+margin-bottom: 10px;
+clear: both;
+overflow: hidden;
+}
+
+.forgot_password {
+display: block;
+margin: 20px 0 0px;
+clear: both;
+overflow: hidden;
+text-decoration: none;
+color: black;
+}
+/* User Register Form */
+
+.user_register {
+display: none;
+}
+
+.user_register label {
+display: block;
+margin-bottom: 5px;
+}
+
+.user_register input[type="text"],
+.user_register input[type="email"],
+.user_register input[type="password"] {
+display: block;
+width: 90%;
+padding: 10px;
+border: 1px solid #DDD;
+color: black;
+}
+
+.user_register input[type="checkbox"] {
+float: left;
+margin-right: 5px;
+}
+
+.user_register input[type="checkbox"]+label {
+float: left;
+}
+
+.user_register .checkbox {
+margin-bottom: 10px;
+clear: both;
+overflow: hidden;
+}
+.container-sm{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+padding: 5px;
+width: 100%;
+align-items: center;
+}
